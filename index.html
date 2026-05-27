@@ -10363,8 +10363,64 @@ m_{AB} = -2.5 \,\mathrm{log}_{10} \left(\frac{f}{3631 \, Jy}\right)
         </div>
       </div>
     </div>
+    <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=25899cfd">
+      <div class="jp-Cell-inputWrapper" tabindex="0">
+        <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+        </div>
+        <div class="jp-InputArea jp-Cell-inputArea">
+          <div class="jp-InputPrompt jp-InputArea-prompt">
+          </div>
+          <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+            <p><i>Author's Note: All content below this point was added on May 27, Wednesday, for additional
+                completeness and personal satisfaction. These notes were added after I had finished other final projects
+                for other classes with deadlines early in finals week.</i></p>
+            <p>Previously, we only implemented a crude correction of multiplying the flux values in the g and i band by
+              100. The averages of the systematic offsets are as follows:</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>-</th>
+                  <th>Scaling Factor from Astrometry to DS9 (Linear)</th>
+                  <th>Scaling Factor from Astrometry to DS9 (Log10)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>G-Band</td>
+                  <td>85.5</td>
+                  <td>1.93</td>
+                </tr>
+                <tr>
+                  <td>I-Band</td>
+                  <td>107</td>
+                  <td>2.03</td>
+                </tr>
+              </tbody>
+            </table>
+            <p align="center">
+              <img alt="Description" src="linearscale1.png" style="display: block; margin: 0 auto;" />
+            </p>
+            <p>This indicates that the systematic offset is slightly larger in than i-band. Correcting for these
+              averages instead of the crude 100x multiplication factor produces the following CMD, which reflects a
+              promising alignment in the x-axis:</p>
+            <p align="center">
+              <img alt="Description" src="12Gyrnew.png" style="display: block; margin: 0 auto;" />
+            </p>
+            <p>Thus, data from a manual check of the integrated flux of five stars supports our discussion further that
+              the systematic offsets from Astrometry's fluxes to the actual fluxes are not uniform in the i-band and
+              g-band, and it is larger in the i-band.</p>
+            <p>We note, however, that there were many sources of uncertainty in our quick review of the five stars. Most
+              critically, there was no controlled mechanism for setting the aperture radius over which fluxes would be
+              integrated. Setting the aperture was done purely by eye, with my drawing of the circle to be large enough
+              such that it enclosed the star. It is possible that the star's light extends further out than what was
+              visible on screen. If this were to be verified, it would increase our systematic offsets further, and thus
+              decrease our final magnitude values and possibly obtain a better match with the isochrones in the y-axis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
-
 
 </body>
 
